@@ -1,6 +1,6 @@
 # AWS Cloud Practitioner Knowledge Test - Frontend
 
-<p align="center"> <img src="https://github.com/mouad5-bot/Quizizy-AWS/blob/main/quizez.png" /> </p>
+<p align="center"> <img src="https://github.com/mouad5-bot/Quizizy-AWS/blob/main/assets/img/quizez.png" /> </p>
 
 <h2>  Contexte du projet </h2>
 
