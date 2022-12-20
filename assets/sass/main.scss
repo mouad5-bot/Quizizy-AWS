@@ -2,7 +2,7 @@ h1{
     background-color: aqua;
 }
 
-
+// stepper styling #start
 .bs-stepper .step-trigger {
     display: inline-flex;
     flex-wrap: wrap;
@@ -171,3 +171,25 @@ h1{
     .vertical .content.fade.dstepper-none {
       visibility: hidden;
     }
+
+ // stepper styling #end
+ 
+ // nav bar styling #start
+ nav .logonav,img{
+  height: 5rem;
+  width: 10rem;
+  margin-left: 2rem;
+ }
+
+ .navbar-collapse{
+  margin-left: 15rem;
+  ul{
+    li{
+      margin-right: 3rem;
+      a{
+        color: black;
+      }
+    }
+  }
+ }
+// nav bar styling #end

@@ -201,3 +201,19 @@ h1 {
 .vertical .content.fade.dstepper-none {
   visibility: hidden;
 }
+
+nav .logonav, img {
+  height: 5rem;
+  width: 10rem;
+  margin-left: 2rem;
+}
+
+.navbar-collapse {
+  margin-left: 15rem;
+}
+.navbar-collapse ul li {
+  margin-right: 3rem;
+}
+.navbar-collapse ul li a {
+  color: black;
+}
