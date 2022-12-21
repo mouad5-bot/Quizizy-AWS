@@ -1,5 +1,37 @@
-h1 {
-  background-color: aqua;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  margin-top: 3rem;
+}
+.main .alert-landing {
+  background-color: rgb(126, 217, 87);
+  height: 3.5rem;
+  width: 40rem;
+  border-radius: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.main .alert-landing h4 {
+  text-align: center;
+  padding-top: 0.8rem;
+  color: #fff;
+}
+.main .card {
+  height: 40vh;
+  width: 50vw;
+  margin: auto;
+}
+.main .card .card-body form {
+  margin-top: 1.5rem;
+}
+.main .card .card-body form a {
+  width: 47vw;
+  height: 6vh;
 }
 
 .bs-stepper .step-trigger {
