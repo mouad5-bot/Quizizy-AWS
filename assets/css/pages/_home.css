@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.main {
+  margin-top: 3rem;
+}
+.main .alert-landing {
+  background-color: rgb(126, 217, 87);
+  height: 3.5rem;
+  width: 40rem;
+  border-radius: 0.5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+}
+.main .alert-landing h4 {
+  text-align: center;
+  padding-top: 0.8rem;
+  color: #fff;
+}
+.main .card {
+  height: 10vh;
+  width: 40vw;
+  margin: auto;
+}
+.main .card .card-body form button {
+  width: 49vw;
+  height: 7vh;
+}
