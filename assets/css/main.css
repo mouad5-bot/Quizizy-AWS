@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 h1 {
   background-color: aqua;
 }
@@ -218,26 +225,33 @@ nav .logonav, img {
   color: black;
 }
 
+.main {
+  margin-top: 3rem;
+}
 .main .alert-landing {
   background-color: rgb(126, 217, 87);
-  height: 4rem;
+  height: 3.5rem;
   width: 40rem;
   border-radius: 0.5rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
 }
 .main .alert-landing h4 {
   text-align: center;
-  padding-top: 1rem;
+  padding-top: 0.8rem;
+  color: #fff;
 }
 .main .card {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  height: 10rem;
+  width: 40rem;
+  margin: auto;
 }
 .main .card .card-body form button {
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
+  width: 49vw;
+  height: 7vh;
 }
