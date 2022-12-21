@@ -187,8 +187,12 @@ nav .logonav, img {
 }
 
 .main .alert-landing {
-  background-color: #007bff;
+  background-color: #7e7c9c;
   height: 4rem;
   width: 40rem;
-  justify-content: center;
+  text-align: center;
+}
+.main .alert-landing h4 {
+  text-align: center;
+  margin-top: 1rem;
 }/*# sourceMappingURL=main.css.map */

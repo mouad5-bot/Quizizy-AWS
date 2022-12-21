@@ -195,14 +195,33 @@ h1{
 // nav bar styling #end
 
 //alert mesage of landing_page
-.main{
-  .alert-landing{
-    background-color: #007bff;
+.main
+{
+  .alert-landing
+  {
+    background-color: rgb(126, 217, 87);
     height: 4rem;
     width: 40rem;
+    border-radius: .5rem;
     justify-content: center;
-    h4{
-      
+    h4
+    {
+     text-align: center;
+     padding-top: 1rem;
+    }
+  }
+  .card{
+    justify-content: center;
+    .card-body{
+      form{
+        button{
+          // padding-right: 15rem ;
+          // padding-left: 15rem ;
+          justify-content: right;
+
+        }
+      }
+
     }
   }
 }

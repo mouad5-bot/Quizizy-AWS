@@ -219,10 +219,25 @@ nav .logonav, img {
 }
 
 .main .alert-landing {
-  background-color: #007bff;
+  background-color: rgb(126, 217, 87);
   height: 4rem;
   width: 40rem;
+  border-radius: 0.5rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.main .alert-landing h4 {
+  text-align: center;
+  padding-top: 1rem;
+}
+.main .card {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.main .card .card-body form button {
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
 }
