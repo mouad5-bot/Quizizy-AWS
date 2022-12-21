@@ -184,4 +184,11 @@ nav .logonav, img {
 }
 .navbar-collapse ul li a {
   color: black;
+}
+
+.main .alert-landing {
+  background-color: #007bff;
+  height: 4rem;
+  width: 40rem;
+  justify-content: center;
 }/*# sourceMappingURL=main.css.map */

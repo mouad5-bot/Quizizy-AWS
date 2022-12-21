@@ -217,3 +217,12 @@ nav .logonav, img {
 .navbar-collapse ul li a {
   color: black;
 }
+
+.main .alert-landing {
+  background-color: #007bff;
+  height: 4rem;
+  width: 40rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
