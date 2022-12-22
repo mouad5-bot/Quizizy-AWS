@@ -1,3 +1,7 @@
+body{
+  //overflow: hidden; //remove scroll
+}
+
 // stepper styling #start
 .bs-stepper .step-trigger {
     display: inline-flex;
@@ -175,6 +179,7 @@
 $items: 5;
 $i: 1;
 $bg-color : rgb(126, 217, 87), rgb(82, 133, 255), rgb(255, 87, 87), rgb(82, 133, 255);
+$size-margin : 45%, 5%, 45%, 5%;
 @while $i < $items{
  .alert-info-#{$i}
   {
@@ -182,9 +187,7 @@ $bg-color : rgb(126, 217, 87), rgb(82, 133, 255), rgb(255, 87, 87), rgb(82, 133,
     height: 3.5rem;
     width: 40rem;
     border-radius: .5rem;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
+    margin-left: nth($size-margin, $i);
     h4
     {
      text-align: center;
@@ -194,4 +197,24 @@ $bg-color : rgb(126, 217, 87), rgb(82, 133, 255), rgb(255, 87, 87), rgb(82, 133,
   }
   $i: $i + 1;
 }
-// _______________Alert info #END____________________ 
+
+.navigation{
+  button{
+    float: right;
+
+  }
+}
+// _______________Alert info #END__________________________ 
+
+
+// _______________questios quiz #start______________________
+
+.border-question{
+  border: #007bff;
+  border-radius: 1rem;
+  ul{
+    li{
+      list-style-type: none;
+    }
+  }
+}
