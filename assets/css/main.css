@@ -296,11 +296,30 @@
 }
 
 .border-question {
-  border: #007bff;
-  border-radius: 1rem;
+  border: 0.2rem solid #007bff;
+  border-radius: 0.5rem;
+  height: 100%;
+  width: 50%;
+  margin: auto;
 }
-.border-question ul li {
-  list-style-type: none;
+.border-question .question {
+  text-align: center;
+}
+.border-question .question .row label {
+  text-align: start;
+  margin-top: 1rem;
+}
+.border-question .question h5 {
+  margin-top: 1rem;
+}
+.border-question .question #choice {
+  display: block;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.border-question #navigation {
+  margin-left: 3rem;
 }
 
 nav .logonav, img {
