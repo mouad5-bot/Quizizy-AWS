@@ -138,6 +138,9 @@
 .border-question .question {
   text-align: center;
 }
+.border-question .question .row {
+  margin-top: 1rem;
+}
 .border-question .question .row label {
   text-align: start;
 }

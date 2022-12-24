@@ -22,7 +22,7 @@
         "description" : "AWS DMS helps users migrate databases to AWS quickly and securely. The source database remains fully operational during the migration, minimizing downtime to applications that rely on the database. AWS DMS  can migrate data to and from most widely used commercial and open-source databases."  
     },
     {
-        "question"    : ") Which AWS offering enables users to find, buy, and immediately start using software solutions in theirAWS environment?",
+        "question"    : "Which AWS offering enables users to find, buy, and immediately start using software solutions in theirAWS environment?",
         "choices"     : [
                             "AWS Config ",
                             "AWS OpsWorks ",
@@ -44,7 +44,7 @@
         "description" : "Amazon VPC lets users provision a logically isolated section of the AWS Cloud where users can launch AWS resources in a virtual network that they define.   "  
     },
     {
-        "question"    : ") Which of the following is an AWS responsibility under the AWS shared responsibility model? ",
+        "question"    : "Which of the following is an AWS responsibility under the AWS shared responsibility model? ",
         "choices"     : [
                             "Configuring third-party applications ",
                             "Maintaining physical hardware ",
@@ -88,7 +88,7 @@
         "description" : "AWS CloudTrail helps users enable governance, compliance, and operational and risk auditing of theirAWS accounts. Actions taken by a user, role, or an AWS service are recorded as events in CloudTrail. Events include actions taken in the AWS Management Console, AWS Command Line Interface (CLI), and AWS SDKs and APIs. "  
     },
     {
-        "question"    : ") Which service would be used to send alerts based on Amazon CloudWatch alarms? ",
+        "question"    : "Which service would be used to send alerts based on Amazon CloudWatch alarms? ",
         "choices"     : [
                             "Amazon Simple Notification Service (Amazon SNS) ",
                             "AWS CloudTrail",
