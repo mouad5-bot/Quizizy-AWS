@@ -2,10 +2,15 @@ body{
   //overflow: hidden; //remove scroll
 }
 
-    /* Style the stepper */
+    /* Style the stepper */   
     .stepper {
       list-style: none;
       display: flex;
+      margin-top: 4rem;
+      margin-bottom: 3rem;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
     }
   
     /* Style the steps */
@@ -13,17 +18,25 @@ body{
       flex: 1;
       text-align: center;
       position: relative;
+    
+      button {
+        //display: block;
+        padding: 10px;
+        background: white;
+        border-color: #007bff;
+        border-radius: 10%;
+        color: #666;
+        text-decoration: none;
+
+        &:hover{
+          color: #007bff;
+        }
+      }
+      hr{
+        border: 1rem;
+      }
     }
-  
-    /* Style the labels */
-    .stepper li button {
-      display: block;
-      padding: 10px;
-      background: #eee;
-      border-radius: 2px;
-      color: #666;
-      text-decoration: none;
-    }
+
   
     /* Style the current step */
     .stepper li.current button {
@@ -36,32 +49,32 @@ body{
 // _______________Alert info #START____________________ 
 $items: 5;
 $i: 1;
-$bg-color : rgb(126, 217, 87), rgb(82, 133, 255), rgb(255, 87, 87), rgb(82, 133, 255);
+$bg-color : rgb(126, 217, 87), rgb(82, 133, 255), rgb(255, 87, 87), rgb(126, 217, 87);
 $size-margin : 45%, 5%, 45%, 5%;
-@while $i < $items{
- .alert-info-#{$i}
+
+.alerts-info
+{
+  @while $i < $items
   {
-    background-color: nth($bg-color, $i);
-    height: 3.5rem;
-    width: 40rem;
-    border-radius: .5rem;
-    margin-left: nth($size-margin, $i);
-    h4
+    .alert-info-#{$i}
     {
-     text-align: center;
-     padding-top: .8rem;
-     color: #fff;
+      background-color: nth($bg-color, $i);
+      height: 3.5rem;
+      width: 40rem;
+      border-radius: .5rem;
+      margin-left: nth($size-margin, $i);
+      margin-top: 3rem;
+      h4
+      {
+      text-align: center;
+      padding-top: .8rem;
+      color: #fff;
+      }
     }
-  }
-  $i: $i + 1;
-}
-
-.navigation{
-  button{
-    float: right;
-
+    $i: $i + 1;
   }
 }
+
 // _______________Alert info #END__________________________ 
 
 
@@ -111,6 +124,13 @@ $size-margin : 45%, 5%, 45%, 5%;
 
   #navigation{
     margin-left: 3rem;
+  }
+}
+
+.alerts-info{
+  margin: auto;
+  #navigation{
+    margin: auto;
   }
 }
 
