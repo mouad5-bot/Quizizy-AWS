@@ -1,13 +1,39 @@
-body{
-  //overflow: hidden; //remove scroll
-}
+// body{
+//   overflow: hidden; //remove scroll
+// }
 
-    /* Style the stepper */   
+/*_________________styel a progress bar______________*/
+.prorogres-parent
+{
+  margin: 2rem;
+  margin-left: 12rem;
+  .progress
+  {
+    position: relative;
+    width: 80%; 
+    .progress-bar
+    {
+      position: absolute;
+      background-color: rgb(126, 217, 87);
+      height: 100%;
+    }
+    #animation{
+      animation: progress-animation 2s forwards;
+    }
+    // for make an animation
+    @keyframes progress-animation  
+    {
+      0% {width: 0%;}
+      100% {width: 10%;}
+    }
+  }
+} 
+
+    /* __________Style the stepper ______________*/   
     .stepper {
       list-style: none;
       display: flex;
       margin-top: 4rem;
-      margin-bottom: 3rem;
       justify-content: center;
       text-align: center;
       align-items: center;
@@ -32,9 +58,6 @@ body{
           color: #007bff;
         }
       }
-      hr{
-        border: 1rem;
-      }
     }
 
   
@@ -50,7 +73,7 @@ body{
 $items: 5;
 $i: 1;
 $bg-color : rgb(126, 217, 87), rgb(82, 133, 255), rgb(255, 87, 87), rgb(126, 217, 87);
-$size-margin : 45%, 5%, 45%, 5%;
+//$size-margin : 45%, 5%, 45%, 5%;
 
 .alerts-info
 {
@@ -62,7 +85,7 @@ $size-margin : 45%, 5%, 45%, 5%;
       height: 3.5rem;
       width: 40rem;
       border-radius: .5rem;
-      margin-left: nth($size-margin, $i);
+      margin:auto; //nth($size-margin, $i);
       margin-top: 3rem;
       h4
       {
@@ -85,7 +108,7 @@ $size-margin : 45%, 5%, 45%, 5%;
   border: .2rem solid #007bff;
   border-radius: .5rem;
   height: 100%;
-  width: 50%;
+  width: 50%; 
   margin: auto;
   .question
   {

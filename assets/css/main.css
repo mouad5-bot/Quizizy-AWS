@@ -40,14 +40,48 @@
   height: 5vh;
 }
 
-/* Style the stepper */
+/*_________________styel a progress bar______________*/
+.prorogres-parent {
+  margin: 2rem;
+  margin-left: 12rem;
+}
+.prorogres-parent .progress {
+  position: relative;
+  width: 80%;
+}
+.prorogres-parent .progress .progress-bar {
+  position: absolute;
+  background-color: rgb(126, 217, 87);
+  height: 100%;
+}
+.prorogres-parent .progress #animation {
+  -webkit-animation: progress-animation 2s forwards;
+          animation: progress-animation 2s forwards;
+}
+@-webkit-keyframes progress-animation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 10%;
+  }
+}
+@keyframes progress-animation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 10%;
+  }
+}
+
+/* __________Style the stepper ______________*/
 .stepper {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-top: 4rem;
-  margin-bottom: 3rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -76,9 +110,6 @@
 .stepper li button:hover {
   color: #007bff;
 }
-.stepper li hr {
-  border: 1rem;
-}
 
 /* Style the current step */
 .stepper li.current button {
@@ -91,7 +122,7 @@
   height: 3.5rem;
   width: 40rem;
   border-radius: 0.5rem;
-  margin-left: 45%;
+  margin: auto;
   margin-top: 3rem;
 }
 .alerts-info .alert-info-1 h4 {
@@ -104,7 +135,7 @@
   height: 3.5rem;
   width: 40rem;
   border-radius: 0.5rem;
-  margin-left: 5%;
+  margin: auto;
   margin-top: 3rem;
 }
 .alerts-info .alert-info-2 h4 {
@@ -117,7 +148,7 @@
   height: 3.5rem;
   width: 40rem;
   border-radius: 0.5rem;
-  margin-left: 45%;
+  margin: auto;
   margin-top: 3rem;
 }
 .alerts-info .alert-info-3 h4 {
@@ -130,7 +161,7 @@
   height: 3.5rem;
   width: 40rem;
   border-radius: 0.5rem;
-  margin-left: 5%;
+  margin: auto;
   margin-top: 3rem;
 }
 .alerts-info .alert-info-4 h4 {

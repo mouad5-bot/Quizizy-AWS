@@ -2,21 +2,21 @@ let index = 0;
 let data = []; 
 getData();
 
-async function getData() 
-{
-    try {
-      const response = await fetch('question.json');
-      const  res = await response.json(); 
-      getQuestions(res); //callback
-    } catch (error) {
-      console.error(error);
-    }
-} 
+  async function getData() 
+  {
+      try {
+        const response = await fetch('question.json');
+        const  res = await response.json(); 
+        getQuestions(res); //callback
+      } catch (error) {
+        console.error(error);
+      }
+  } 
 
-function getQuestions(questions)
-{
-    data=questions.sort(()=>Math.random()-0.5 ); //sort : trier 
-}
+  function getQuestions(questions)
+  {
+      data=questions.sort(()=>Math.random()-0.5 ); //sort : trier 
+  }
 
   let info_div = document.getElementById("step-1");
   let question_div = document.getElementById("step-2");
@@ -125,22 +125,64 @@ function getQuestions(questions)
             </div>
         </div>   <hr/> ` ;
     }
-  } 
+  }
+  
+
 
   function testingQuestions()
   {
     let checkRadio = document.querySelector("input:checked");
 
-    if(checkRadio)
-    {
-        question();  
-    }else
-    {
-        alert('please select one choice');
+      if(checkRadio)
+      {
+          question();  
+      }else
+      {
+          alert('please select one choice');
+      }
 
-    }
+    progressBar();
 
   }
+
+  
+  function progressBar()
+  {
+    //const animation = document.getElementById('animation');
+
+
+    // let count = 0;
+    // const intervalId = setInterval(function() 
+    //   {
+    //     console.log('Interval running');
+    //     count++;
+    //     if (count > 10) {
+    //       clearInterval(intervalId);
+    //     }
+    //   }, 1000);
+
+      const progress = document.getElementById('progress-bar');  
+      progress.setAttribute('id', 'animation');
+      
+      // var pos = 0;
+      // clearInterval(id);
+      // console.log(id);
+      // id = setInterval(frame, 10);
+      // function frame() 
+      // {
+      //   if (pos == 100/10) 
+      //   {
+      //     clearInterval(id);
+      //   } else 
+      //   {
+      //     progress.style.left = pos + 'px'; 
+      //     progress.style.right = pos + 'px'; 
+      //     pos++; 
+      //     //
+      //   }
+      // }
+  }
+
 
 function showQuestionComponent(){
     
