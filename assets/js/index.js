@@ -1,4 +1,5 @@
 let index = 0;
+let index_progress_bar = 0;
 let data = []; 
 getData();
 
@@ -135,52 +136,22 @@ getData();
 
       if(checkRadio)
       {
-          question();  
+          question(); 
+          progressBar(); 
       }else
       {
           alert('please select one choice');
       }
 
-    progressBar();
 
   }
 
   
   function progressBar()
   {
-    //const animation = document.getElementById('animation');
-
-
-    // let count = 0;
-    // const intervalId = setInterval(function() 
-    //   {
-    //     console.log('Interval running');
-    //     count++;
-    //     if (count > 10) {
-    //       clearInterval(intervalId);
-    //     }
-    //   }, 1000);
-
-      const progress = document.getElementById('progress-bar');  
-      progress.setAttribute('id', 'animation');
-      
-      // var pos = 0;
-      // clearInterval(id);
-      // console.log(id);
-      // id = setInterval(frame, 10);
-      // function frame() 
-      // {
-      //   if (pos == 100/10) 
-      //   {
-      //     clearInterval(id);
-      //   } else 
-      //   {
-      //     progress.style.left = pos + 'px'; 
-      //     progress.style.right = pos + 'px'; 
-      //     pos++; 
-      //     //
-      //   }
-      // }
+    index_progress_bar += 100/data.length;
+    document.querySelector('.progress-bar').style.width = `${index_progress_bar}%`;        
+     
   }
 
 
@@ -195,4 +166,37 @@ function showQuestionComponent(){
     result_div.classList.remove("d-block");
 
     question();
+}
+
+function validateForm() 
+{
+  console.log("hey");
+  // Get the value of the "name" field
+  var name = document.forms["myForm"]["name"].value;
+
+  // Check if the name field is empty
+  if (name == "") {
+    alert("first Name must be filled out");
+    return false;
+  }
+
+
+  var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() {
+  if (xhr.readyState == XMLHttpRequest.DONE) {
+    if (xhr.status == 200) {
+      // Request was successful
+      document.getElementById('content').innerHTML = xhr.responseText;
+    } else {
+      // Request failed
+      alert('An error occurred: ' + xhr.status);
+    }
+  }
+};
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', '../../index.html', true);
+  xhr.send();
+
+  // Return true if the form is valid
+  return true;
 }

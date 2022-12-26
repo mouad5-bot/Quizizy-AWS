@@ -41,38 +41,22 @@
 }
 
 /*_________________styel a progress bar______________*/
-.prorogres-parent {
-  margin: 2rem;
-  margin-left: 12rem;
-}
-.prorogres-parent .progress {
+.progress {
   position: relative;
-  width: 80%;
+  margin: auto;
+  width: 50%;
+  border-radius: 13px;
 }
-.prorogres-parent .progress .progress-bar {
+.progress .progress-bar {
   position: absolute;
   background-color: rgb(126, 217, 87);
+  -webkit-box-shadow: 1px 1px 11px 1px rgb(126, 217, 87);
+          box-shadow: 1px 1px 11px 1px rgb(126, 217, 87);
   height: 100%;
-}
-.prorogres-parent .progress #animation {
-  -webkit-animation: progress-animation 2s forwards;
-          animation: progress-animation 2s forwards;
-}
-@-webkit-keyframes progress-animation {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 10%;
-  }
-}
-@keyframes progress-animation {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 10%;
-  }
+  width: 0;
+  border-radius: 13px;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 /* __________Style the stepper ______________*/
@@ -119,8 +103,8 @@
 
 .alerts-info .alert-info-1 {
   background-color: rgb(126, 217, 87);
-  height: 3.5rem;
-  width: 40rem;
+  height: 7.5vh;
+  width: 40vw;
   border-radius: 0.5rem;
   margin: auto;
   margin-top: 3rem;
@@ -132,8 +116,8 @@
 }
 .alerts-info .alert-info-2 {
   background-color: rgb(82, 133, 255);
-  height: 3.5rem;
-  width: 40rem;
+  height: 7.5vh;
+  width: 40vw;
   border-radius: 0.5rem;
   margin: auto;
   margin-top: 3rem;
@@ -145,8 +129,8 @@
 }
 .alerts-info .alert-info-3 {
   background-color: rgb(255, 87, 87);
-  height: 3.5rem;
-  width: 40rem;
+  height: 7.5vh;
+  width: 40vw;
   border-radius: 0.5rem;
   margin: auto;
   margin-top: 3rem;
@@ -158,8 +142,8 @@
 }
 .alerts-info .alert-info-4 {
   background-color: rgb(126, 217, 87);
-  height: 3.5rem;
-  width: 40rem;
+  height: 7.5vh;
+  width: 40vw;
   border-radius: 0.5rem;
   margin: auto;
   margin-top: 3rem;
