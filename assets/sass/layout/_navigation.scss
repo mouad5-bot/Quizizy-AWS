@@ -1,10 +1,18 @@
-nav .logonav,img{
-    height: 5rem;
-    width: 10rem;
-    margin-left: 2rem;
-   }
+nav 
+{
+  background-color: rgb(243, 243, 243);
+  .navlogo
+  {
+    img
+    {
+      height: 5rem;
+      width: 10rem;
+      margin-left: 2rem;
+    }
+  }
   
-   .navbar-collapse{
+  .navbar-collapse
+  {
     margin-left: 15rem;
     ul
     {
@@ -17,4 +25,5 @@ nav .logonav,img{
         }
       }
     }
+  }
 }

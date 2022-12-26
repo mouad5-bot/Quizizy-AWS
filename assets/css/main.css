@@ -27,7 +27,7 @@
   color: #fff;
 }
 .main .card {
-  height: 40vh;
+  height: 35vh;
   width: 50vw;
   margin: auto;
 }
@@ -35,222 +35,191 @@
   margin-top: 1.5rem;
 }
 .main .card .card-body form a {
+  margin-top: 1rem;
   width: 47vw;
-  height: 6vh;
+  height: 5vh;
 }
 
-.bs-stepper .step-trigger {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+/*_________________styel a progress bar______________*/
+.prorogres-parent {
+  margin: 2rem;
+  margin-left: 12rem;
+}
+.prorogres-parent .progress {
+  position: relative;
+  width: 80%;
+}
+.prorogres-parent .progress .progress-bar {
+  position: absolute;
+  background-color: rgb(126, 217, 87);
+  height: 100%;
+}
+.prorogres-parent .progress #animation {
+  -webkit-animation: progress-animation 2s forwards;
+          animation: progress-animation 2s forwards;
+}
+@-webkit-keyframes progress-animation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 10%;
+  }
+}
+@keyframes progress-animation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 10%;
+  }
+}
+
+/* __________Style the stepper ______________*/
+.stepper {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 4rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 20px;
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 1.5;
-  color: #6c757d;
   text-align: center;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  background-color: transparent;
-  border: none;
-  border-radius: 0.25rem;
-  -webkit-transition: background-color 0.15s ease-out, color 0.15s ease-out;
-  transition: background-color 0.15s ease-out, color 0.15s ease-out;
-}
-
-.bs-stepper .step-trigger:not(:disabled):not(.disabled) {
-  cursor: pointer;
-}
-
-.bs-stepper .step-trigger:disabled,
-.bs-stepper .step-trigger.disabled {
-  pointer-events: none;
-  opacity: 0.65;
-}
-
-.bs-stepper .step-trigger:focus {
-  color: #007bff;
-  outline: none;
-}
-
-.bs-stepper .step-trigger:hover {
-  text-decoration: none;
-  background-color: rgba(0, 0, 0, 0.06);
-}
-
-@media (max-width: 520px) {
-  .bs-stepper .step-trigger {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding: 10px;
-  }
-}
-.bs-stepper-label {
-  display: inline-block;
-  margin: 0.25rem;
-}
-
-.bs-stepper-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-@media (max-width: 520px) {
-  .bs-stepper-header {
-    margin: 0 -10px;
-    text-align: center;
-  }
-}
-.bs-stepper-line,
-.bs-stepper .line {
+/* Style the steps */
+.stepper li {
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 32px;
-          flex: 1 0 32px;
-  min-width: 1px;
-  min-height: 1px;
-  margin: auto;
-  background-color: rgba(0, 0, 0, 0.12);
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  position: relative;
+}
+.stepper li button {
+  padding: 10px;
+  background: white;
+  border-color: #007bff;
+  border-radius: 10%;
+  color: #666;
+  text-decoration: none;
+}
+.stepper li button:hover {
+  color: #007bff;
 }
 
-@media (max-width: 400px) {
-  .bs-stepper-line,
-.bs-stepper .line {
-    -ms-flex-preferred-size: 20px;
-        flex-basis: 20px;
-  }
-}
-.bs-stepper-circle {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 2em;
-  height: 2em;
-  padding: 0.5em 0;
-  margin: 0.25rem;
-  line-height: 1em;
+/* Style the current step */
+.stepper li.current button {
+  background: #4caf50;
   color: #fff;
-  background-color: #6c757d;
-  border-radius: 1em;
 }
 
-.active .bs-stepper-circle {
-  background-color: #007bff;
+.alerts-info .alert-info-1 {
+  background-color: rgb(126, 217, 87);
+  height: 3.5rem;
+  width: 40rem;
+  border-radius: 0.5rem;
+  margin: auto;
+  margin-top: 3rem;
+}
+.alerts-info .alert-info-1 h4 {
+  text-align: center;
+  padding-top: 0.8rem;
+  color: #fff;
+}
+.alerts-info .alert-info-2 {
+  background-color: rgb(82, 133, 255);
+  height: 3.5rem;
+  width: 40rem;
+  border-radius: 0.5rem;
+  margin: auto;
+  margin-top: 3rem;
+}
+.alerts-info .alert-info-2 h4 {
+  text-align: center;
+  padding-top: 0.8rem;
+  color: #fff;
+}
+.alerts-info .alert-info-3 {
+  background-color: rgb(255, 87, 87);
+  height: 3.5rem;
+  width: 40rem;
+  border-radius: 0.5rem;
+  margin: auto;
+  margin-top: 3rem;
+}
+.alerts-info .alert-info-3 h4 {
+  text-align: center;
+  padding-top: 0.8rem;
+  color: #fff;
+}
+.alerts-info .alert-info-4 {
+  background-color: rgb(126, 217, 87);
+  height: 3.5rem;
+  width: 40rem;
+  border-radius: 0.5rem;
+  margin: auto;
+  margin-top: 3rem;
+}
+.alerts-info .alert-info-4 h4 {
+  text-align: center;
+  padding-top: 0.8rem;
+  color: #fff;
 }
 
-.bs-stepper-content {
-  padding: 0 20px 20px;
+.border-question {
+  border: 0.2rem solid #007bff;
+  border-radius: 0.5rem;
+  height: 100%;
+  width: 50%;
+  margin: auto;
 }
-
-@media (max-width: 520px) {
-  .bs-stepper-content {
-    padding: 0;
-  }
+.border-question .question {
+  text-align: center;
 }
-.bs-stepper.vertical {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.border-question .question .row {
+  margin-top: 1rem;
 }
-
-.bs-stepper.vertical .bs-stepper-header {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  margin: 0;
+.border-question .question .row label {
+  text-align: start;
 }
-
-.bs-stepper.vertical .bs-stepper-pane,
-.bs-stepper.vertical .content {
+.border-question .question h5 {
+  margin-top: 1rem;
+}
+.border-question .question #choice {
   display: block;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.border-question #navigation {
+  margin-left: 3rem;
 }
 
-.bs-stepper.vertical .bs-stepper-pane:not(.fade),
-.bs-stepper.vertical .content:not(.fade) {
-  display: block;
-  visibility: hidden;
+.alerts-info {
+  margin: auto;
+}
+.alerts-info #navigation {
+  margin: auto;
 }
 
-.bs-stepper-pane:not(.fade),
-.bs-stepper .content:not(.fade) {
-  display: none;
+nav {
+  background-color: rgb(243, 243, 243);
 }
-
-.bs-stepper .content.fade,
-.bs-stepper-pane.fade {
-  visibility: hidden;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-  -webkit-transition-property: opacity;
-  transition-property: opacity;
-}
-
-.bs-stepper-pane.fade.active,
-.bs-stepper .content.fade.active {
-  visibility: visible;
-  opacity: 1;
-}
-
-.bs-stepper-pane.active:not(.fade),
-.bs-stepper .content.active:not(.fade) {
-  display: block;
-  visibility: visible;
-}
-
-.bs-stepper-pane.dstepper-block,
-.bs-stepper .content.dstepper-block {
-  display: block;
-}
-
-.bs-stepper:not(.vertical) .bs-stepper-pane.dstepper-none,
-.bs-stepper:not(.vertical) .content.dstepper-none {
-  display: none;
-}
-
-.vertical .bs-stepper-pane.fade.dstepper-none,
-.vertical .content.fade.dstepper-none {
-  visibility: hidden;
-}
-
-nav .logonav, img {
+nav .navlogo img {
   height: 5rem;
   width: 10rem;
   margin-left: 2rem;
 }
-
-.navbar-collapse {
+nav .navbar-collapse {
   margin-left: 15rem;
 }
-.navbar-collapse ul li {
+nav .navbar-collapse ul li {
   margin-right: 3rem;
 }
-.navbar-collapse ul li a {
+nav .navbar-collapse ul li a {
   color: black;
 }

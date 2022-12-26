@@ -1,171 +1,159 @@
-// stepper styling #start
-.bs-stepper .step-trigger {
-    display: inline-flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-      padding: 20px;
-      font-size: 1rem;
-      font-weight: 700;
-      line-height: 1.5;
-      color: #6c757d;
-      text-align: center;
-      text-decoration: none;
-      white-space: nowrap;
-      vertical-align: middle;
-      user-select: none;
-      background-color: transparent;
-      border: none;
-      border-radius: .25rem;
-      transition: background-color .15s ease-out, color .15s ease-out;
+// body{
+//   overflow: hidden; //remove scroll
+// }
+
+/*_________________styel a progress bar______________*/
+.prorogres-parent
+{
+  margin: 2rem;
+  margin-left: 12rem;
+  .progress
+  {
+    position: relative;
+    width: 80%; 
+    .progress-bar
+    {
+      position: absolute;
+      background-color: rgb(126, 217, 87);
+      height: 100%;
     }
-  
-    .bs-stepper .step-trigger:not(:disabled):not(.disabled) {
-      cursor: pointer;
+    #animation{
+      animation: progress-animation 2s forwards;
     }
-  
-    .bs-stepper .step-trigger:disabled,
-    .bs-stepper .step-trigger.disabled {
-      pointer-events: none;
-      opacity: .65;
+    // for make an animation
+    @keyframes progress-animation  
+    {
+      0% {width: 0%;}
+      100% {width: 10%;}
     }
-  
-    .bs-stepper .step-trigger:focus {
-      color: #007bff;
-      outline: none;
-    }
-  
-    .bs-stepper .step-trigger:hover {
-      text-decoration: none;
-      background-color: rgba(0, 0, 0, .06);
-    }
-  
-    @media (max-width: 520px) {
-      .bs-stepper .step-trigger {
-        flex-direction: column;
-        padding: 10px;
-      }
-    }
-  
-    .bs-stepper-label {
-      display: inline-block;
-      margin: .25rem;
-    }
-  
-    .bs-stepper-header {
+  }
+} 
+
+    /* __________Style the stepper ______________*/   
+    .stepper {
+      list-style: none;
       display: flex;
+      margin-top: 4rem;
+      justify-content: center;
+      text-align: center;
       align-items: center;
     }
   
-    @media (max-width: 520px) {
-      .bs-stepper-header {
-        margin: 0 -10px;
-        text-align: center;
+    /* Style the steps */
+    .stepper li {
+      flex: 1;
+      text-align: center;
+      position: relative;
+    
+      button {
+        //display: block;
+        padding: 10px;
+        background: white;
+        border-color: #007bff;
+        border-radius: 10%;
+        color: #666;
+        text-decoration: none;
+
+        &:hover{
+          color: #007bff;
+        }
       }
-    }
-  
-    .bs-stepper-line,
-    .bs-stepper .line {
-      flex: 1 0 32px;
-      min-width: 1px;
-      min-height: 1px;
-      margin: auto;
-      background-color: rgba(0, 0, 0, .12);
-    }
-  
-    @media (max-width: 400px) {
-      .bs-stepper-line,
-      .bs-stepper .line {
-        flex-basis: 20px;
-      }
-    }
-  
-    .bs-stepper-circle {
-      display: inline-flex;
-      align-content: center;
-      justify-content: center;
-      width: 2em;
-      height: 2em;
-      padding: .5em 0;
-      margin: .25rem;
-      line-height: 1em;
-      color: #fff;
-      background-color: #6c757d;
-      border-radius: 1em;
-    }
-  
-    .active .bs-stepper-circle {
-      background-color: #007bff;
-    }
-  
-    .bs-stepper-content {
-      padding: 0 20px 20px;
-    }
-  
-    @media (max-width: 520px) {
-      .bs-stepper-content {
-        padding: 0;
-      }
-    }
-  
-    .bs-stepper.vertical {
-      display: flex;
-    }
-  
-    .bs-stepper.vertical .bs-stepper-header {
-      flex-direction: column;
-      align-items: stretch;
-      margin: 0;
-    }
-  
-    .bs-stepper.vertical .bs-stepper-pane,
-    .bs-stepper.vertical .content {
-      display: block;
-    }
-  
-    .bs-stepper.vertical .bs-stepper-pane:not(.fade),
-    .bs-stepper.vertical .content:not(.fade) {
-      display: block;
-      visibility: hidden;
-    }
-  
-    .bs-stepper-pane:not(.fade),
-    .bs-stepper .content:not(.fade) {
-      display: none;
-    }
-  
-    .bs-stepper .content.fade,
-    .bs-stepper-pane.fade {
-      visibility: hidden;
-      transition-duration: .3s;
-      transition-property: opacity;
-    }
-  
-    .bs-stepper-pane.fade.active,
-    .bs-stepper .content.fade.active {
-      visibility: visible;
-      opacity: 1;
-    }
-  
-    .bs-stepper-pane.active:not(.fade),
-    .bs-stepper .content.active:not(.fade) {
-      display: block;
-      visibility: visible;
-    }
-  
-    .bs-stepper-pane.dstepper-block,
-    .bs-stepper .content.dstepper-block {
-      display: block;
-    }
-  
-    .bs-stepper:not(.vertical) .bs-stepper-pane.dstepper-none,
-    .bs-stepper:not(.vertical) .content.dstepper-none {
-      display: none;
-    }
-  
-    .vertical .bs-stepper-pane.fade.dstepper-none,
-    .vertical .content.fade.dstepper-none {
-      visibility: hidden;
     }
 
- // stepper styling #end
+  
+    /* Style the current step */
+    .stepper li.current button {
+      background: #4caf50;
+      color: #fff;
+    }
+ // ____________stepper styling #end________________
+
+ 
+// _______________Alert info #START____________________ 
+$items: 5;
+$i: 1;
+$bg-color : rgb(126, 217, 87), rgb(82, 133, 255), rgb(255, 87, 87), rgb(126, 217, 87);
+//$size-margin : 45%, 5%, 45%, 5%;
+
+.alerts-info
+{
+  @while $i < $items
+  {
+    .alert-info-#{$i}
+    {
+      background-color: nth($bg-color, $i);
+      height: 3.5rem;
+      width: 40rem;
+      border-radius: .5rem;
+      margin:auto; //nth($size-margin, $i);
+      margin-top: 3rem;
+      h4
+      {
+      text-align: center;
+      padding-top: .8rem;
+      color: #fff;
+      }
+    }
+    $i: $i + 1;
+  }
+}
+
+// _______________Alert info #END__________________________ 
+
+
+// _______________questios quiz #start______________________
+
+.border-question
+{
+  border: .2rem solid #007bff;
+  border-radius: .5rem;
+  height: 100%;
+  width: 50%; 
+  margin: auto;
+  .question
+  {
+    text-align: center;
+
+    .row{
+      margin-top: 1rem;
+      label{
+        text-align: start;
+      }
+
+    }
+
+    h5
+    {
+      margin-top: 1rem;
+    }
+
+    #choice{
+        display: block;
+        justify-content: space-between;
+      
+    }
+    
+    // ul
+    // {
+    //   margin-top: 2.5rem;
+
+    //   li
+    //   {
+    //     list-style-type: none;
+    //     margin-bottom: 1rem;
+    //   }
+    // }
+  }
+
+  #navigation{
+    margin-left: 3rem;
+  }
+}
+
+.alerts-info{
+  margin: auto;
+  #navigation{
+    margin: auto;
+  }
+}
+
