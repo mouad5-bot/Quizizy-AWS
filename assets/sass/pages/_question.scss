@@ -1,6 +1,9 @@
 // body{
 //   overflow: hidden; //remove scroll
 // }
+body{
+  background-color: linen;
+}
 
 /*_________________styel a progress bar______________*/
   .progress
@@ -41,15 +44,11 @@
         //display: block;
         padding: 10px;
         background: white;
-        border-color: #007bff;
-        border-radius: 10%;
+        border-color: #bfc6cb;
+        border-radius: 5px;
         color: #666;
         text-decoration: none;
-
-        &:hover{
-          color: #007bff;
-        }
-      }
+      } 
     }
 
   
@@ -74,13 +73,15 @@ $bg-color : rgb(126, 217, 87), rgb(82, 133, 255), rgb(255, 87, 87), rgb(126, 217
     .alert-info-#{$i}
     {
       background-color: nth($bg-color, $i);
-      height: 7.5vh;
+      height: 9.5vh;
       width: 40vw;
       border-radius: .5rem;
       margin:auto; //nth($size-margin, $i);
-      margin-top: 3rem;
-      h4
+      margin-top: 2rem;
+      h6
       {
+        padding: .5rem;
+      font-family: 'Courier New', Courier, monospace;
       text-align: center;
       padding-top: .8rem;
       color: #fff;
@@ -142,10 +143,4 @@ $bg-color : rgb(126, 217, 87), rgb(82, 133, 255), rgb(255, 87, 87), rgb(126, 217
   }
 }
 
-.alerts-info{
-  margin: auto;
-  #navigation{
-    margin: auto;
-  }
-}
 

@@ -79,9 +79,15 @@ getData();
             <label for="q4c" id="QCM4">${data[index].choices[3]}</label> <br>
           </div>
         </div>`
+        index++;
 
-        index++; 
+        if (index == 10){
+          result();
+        }
+         
+      
     }
+    
 
   function result()
   {
@@ -114,7 +120,7 @@ getData();
                   <p> <b>  correct choice :</b> </p> <br>
                 </div>
                 <div class="col-8 text-start">
-                  <label for="q1c" id="QCM1">${data[i].answer}</label> <br>      
+                  <label for="q1c" id="QCM1">${(data[i].answer)+1}</label> <br>      
                 </div>
                 <div class="row">
                   <div class="col-3 ms-3 text-start">
@@ -136,22 +142,20 @@ getData();
 
       if(checkRadio)
       {
+          correctQuestion();       
           question(); 
           progressBar(); 
       }else
       {
           alert('please select one choice');
       }
-
-
   }
 
   
   function progressBar()
   {
     index_progress_bar += 100/data.length;
-    document.querySelector('.progress-bar').style.width = `${index_progress_bar}%`;        
-     
+    document.querySelector('.progress-bar').style.width = `${index_progress_bar}%`;           
   }
 
 
@@ -168,6 +172,13 @@ function showQuestionComponent(){
     question();
 }
 
+
+// correctQuestion(){
+//   let correctQt = 
+//   let incorrectQT = 
+// }
+
+
 function validateForm() 
 {
   console.log("hey");
@@ -178,25 +189,5 @@ function validateForm()
   if (name == "") {
     alert("first Name must be filled out");
     return false;
-  }
-
-
-  var xhr = new XMLHttpRequest();
-xhr.onreadystatechange = function() {
-  if (xhr.readyState == XMLHttpRequest.DONE) {
-    if (xhr.status == 200) {
-      // Request was successful
-      document.getElementById('content').innerHTML = xhr.responseText;
-    } else {
-      // Request failed
-      alert('An error occurred: ' + xhr.status);
-    }
-  }
-};
-  var xhr = new XMLHttpRequest();
-  xhr.open('GET', '../../index.html', true);
-  xhr.send();
-
-  // Return true if the form is valid
-  return true;
+  } 
 }
