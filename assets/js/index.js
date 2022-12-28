@@ -38,6 +38,8 @@ getData();
     function question()
     {
 
+      console.log(index);
+
         
         // document.getElementById("quesH5").innerText = data[index].question;
         // document.getElementById("QCM1").innerText = data[index].choices[0];
@@ -46,7 +48,8 @@ getData();
         // document.getElementById("QCM4").innerText = data[index].choices[3];
         // index++;
 
-        document.getElementById('queston-container').innerHTML = `<h5 id="quesH5"> ${data[index].question} </h5>                
+        if(index < data.length){
+          document.getElementById('queston-container').innerHTML = `<h5 id="quesH5"> ${data[index].question} </h5>                
         <div class="row">
           <div class="col-3">
             <input class="mt-3"  type="radio" name="q1" id="q1c" value=""> <br>
@@ -80,10 +83,49 @@ getData();
           </div>
         </div>`
         index++;
-
-        if (index == 10){
+        }
+        else {
           result();
         }
+
+        // document.getElementById('queston-container').innerHTML = `<h5 id="quesH5"> ${data[index].question} </h5>                
+        // <div class="row">
+        //   <div class="col-3">
+        //     <input class="mt-3"  type="radio" name="q1" id="q1c" value=""> <br>
+        //   </div>
+        //   <div class="col-8">
+        //     <label for="q1c" id="QCM1">${data[index].choices[0]}</label> <br>
+        //   </div>
+        // </div>
+        // <div class="row">
+        //   <div class="col-3">
+        //     <input class=" mt-3"  type="radio" name="q1" id="q2c" value=""> <br>
+        //   </div>
+        //   <div class="col-8">
+        //     <label for="q2c" id="QCM2">${data[index].choices[1]}</label> <br>
+        //   </div>
+        // </div>
+        // <div class="row">
+        //   <div class="col-3">
+        //     <input class=" mt-3"  type="radio" name="q1" id="q3c" value=""> <br>
+        //   </div>
+        //   <div class="col-8">
+        //     <label for="q3c" id="QCM3">${data[index].choices[2]}</label> <br>
+        //   </div>
+        // </div>
+        // <div class="row">
+        //   <div class="col-3">
+        //     <input class= "mt-3"  type="radio" name="q1" id="q4c" value=""> <br>
+        //   </div>
+        //   <div class="col-8">
+        //     <label for="q4c" id="QCM4">${data[index].choices[3]}</label> <br>
+        //   </div>
+        // </div>`
+        // index++;
+
+        // if (index == 10){
+        //   result();
+        // }
          
       
     }
@@ -173,10 +215,11 @@ function showQuestionComponent(){
 }
 
 
-// correctQuestion(){
-//   let correctQt = 
-//   let incorrectQT = 
-// }
+correctQuestion()
+{
+  let correctQt = data[i].answer;
+  console.log(correctQt);
+}
 
 
 function validateForm() 
