@@ -39,7 +39,7 @@ getData();
 
     function question()
     {
-        
+      document.getElementById('msgRecheck').innerHTML = ` `
         // document.getElementById("quesH5").innerText = data[index].question;
         // document.getElementById("QCM1").innerText = data[index].choices[0];
         // document.getElementById("QCM2").innerText = data[index].choices[1];
@@ -102,15 +102,17 @@ getData();
     question_div.classList.remove("d-block");
     result_div.classList.remove("d-none");
 
-    let progress_result = document.getElementById('progress-result').innerHTML = score;
+    document.getElementById('progress-result').innerHTML = score;
     document.getElementById('score').style.width = `${score}%`; 
 
-    let resultContent = document.getElementById("result-content");
+    let resultContent = document.querySelector(".result-div");
     
     for(let i = 0; i < data.length; i++)
     {
       resultContent.innerHTML += 
-      `<div class="question">
+      `
+      <div class="border-question" id="result-content">
+      <div class="question">
             <div class="row">
               <div class="col-3 ms-3 text-start">
                 <p> <b>  question ${i+1} :</b> </p> <br>
@@ -134,7 +136,8 @@ getData();
                   <label for="q1c" id="QCM1">${data[i].description} </label> <br>      
                 </div>
           </div>
-      </div>   <hr/> ` ;
+        </div> 
+      </div> ` ;
     }
   }
   
@@ -153,10 +156,10 @@ getData();
         }
           question(); 
           progressBar(); 
-      }else
-      {
-          `<p> please select one choice </p>`
-      }
+        }else
+        {
+          document.getElementById('msgRecheck').innerHTML = `<h6> please select one choice </h6>`
+        }
   }
 
   

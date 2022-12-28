@@ -188,6 +188,20 @@ body {
 }
 .border-question #navigation {
   margin-left: 3rem;
+  margin-bottom: 1rem;
+}
+
+#queston-container label {
+  float: left;
+}
+
+#msgRecheck h6 {
+  color: red;
+}
+
+.result-div .border-question {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 nav {
