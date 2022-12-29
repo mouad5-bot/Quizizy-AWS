@@ -17,8 +17,8 @@ getData();
 
   function getQuestions(questions)
   {
-      //data=questions.sort(()=>Math.random()-0.5 ); //sort : trier 
-      data=questions;
+      data=questions.sort(()=>Math.random()-0.5 ); //sort : trier 
+      //data=questions;
   }
 
   let info_div = document.getElementById("step-1");
@@ -40,12 +40,6 @@ getData();
     function question()
     {
       document.getElementById('msgRecheck').innerHTML = ` `
-        // document.getElementById("quesH5").innerText = data[index].question;
-        // document.getElementById("QCM1").innerText = data[index].choices[0];
-        // document.getElementById("QCM2").innerText = data[index].choices[1];
-        // document.getElementById("QCM3").innerText = data[index].choices[2];
-        // document.getElementById("QCM4").innerText = data[index].choices[3];
-        // index++;
 
         if(index < data.length){
           document.getElementById('queston-container').innerHTML = `<h5 id="quesH5"> ${data[index].question} </h5>                
