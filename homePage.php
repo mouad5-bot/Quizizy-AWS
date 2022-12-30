@@ -63,7 +63,7 @@
                                 </div>
                             </div>
                             <div class="mt-3">
-                                <a  href="index.html"   class="btn btn-primary btn-sm">Get Started</a>
+                                <a  href="pages/question.php"   class="btn btn-primary btn-sm">Get Started</a>
                             </div>
                         </form>
                     </div>
