@@ -20,22 +20,6 @@ class Connection
             echo $e->getMessage();
         }
     }
-    
-    public function getHost() {
-        return $this->host;
-    }
-    
-    public function getUser() {
-        return $this->user;
-    }
-    
-    public function getPassword() {
-        return $this->password;
-    }
-    
-    public function getDbName() {
-        return $this->dbName;
-    }
 }
 
 
