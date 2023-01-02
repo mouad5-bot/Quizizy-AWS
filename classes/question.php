@@ -3,7 +3,7 @@
 
     class Question extends Connection
     {
-        public $id;
+        public $id ;
         public $question;
         public $choice;
         public $answer;
@@ -16,10 +16,16 @@
             $this->description = $des;
         }
 
-        function getdataCompet(){
-            $seq = "SELECT * FROM questions WHERE $this->id = id";
-            $con = $this->connect();
-                       
-        }
+        function getdataCompet()
+        {
+            $sql = "SELECT * FROM question ";
+            $conn = Connection::connect();
+            $stmt = $conn->prepare($sql); 
+            $stmt->execute();   
+            $arr =  $stmt->fetchAll(PDO::FETCH_ASSOC);
+                echo '<pre> ';
+                var_dump($arr);
+                echo ' </pre>';
+        } 
     }
 ?>
