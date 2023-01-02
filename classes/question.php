@@ -5,11 +5,11 @@
     {
         public $id ;
         public $question;
-        public $choice;
+        public $choices = [];
         public $answer;
-        public $descriptopn;
+        public $description;
 
-        public function __construct($id=NULL, $qus='', $des='')
+        public function __construct($id, $qus, $des)
         {
             $this->id = $id;
             $this->question = $qus;
@@ -18,14 +18,22 @@
 
         function getdataCompet()
         {
-            $sql = "SELECT * FROM question ";
+            $sql = "SELECT * FROM choices WHERE $this->id = id_ques";
             $conn = Connection::connect();
             $stmt = $conn->prepare($sql); 
             $stmt->execute();   
             $arr =  $stmt->fetchAll(PDO::FETCH_ASSOC);
-                echo '<pre> ';
-                var_dump($arr);
-                echo ' </pre>';
+
+            for($i=0; $i < count($arr); $i++)
+            {
+                $this->choices[]= $arr[$i]['choice'];
+                if($arr[$i]['isCorrect'] == 1)
+                {
+                    $this->answer = $i;
+                }
+            }
+            return $this;     
         } 
     }
+
 ?>
