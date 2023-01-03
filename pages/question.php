@@ -52,11 +52,9 @@
             </div>
           </div>
         </div>
-        <form method="GET" action="../config/script.php?question">
           <div class="justify-content-center" id="navigation">
             <button type="submit" class="stepper btn btn-primary" onclick="showQuestionComponent()" >Next</button>
           </div>
-        </form>
       </div>
       <!--_______________Alert info #END_____________________ -->               
     </div>
