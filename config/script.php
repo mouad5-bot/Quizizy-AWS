@@ -11,7 +11,7 @@ require_once '../classes/question.php';
     {
         $objconn = new Connection();
 
-        $allData = "SELECT * FROM questions ";
+        $allData = "SELECT * FROM questions";
         $conn = $objconn->connect();
         $stmt = $conn->prepare($allData); 
         $stmt->execute();   

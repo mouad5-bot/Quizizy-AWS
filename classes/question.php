@@ -26,7 +26,7 @@
 
             for($i=0; $i < count($arr); $i++)
             {
-                $this->choices[]= $arr[$i]['choice'];
+                $this->choices[]= $arr[$i]['choices'];
                 if($arr[$i]['isCorrect'] == 1)
                 {
                     $this->answer = $i;
