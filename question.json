@@ -99,7 +99,7 @@
         "description" : "Amazon SNS and Amazon CloudWatch are integrated so users can collect, view, and analyze metrics forevery active SNS. Once users have configured CloudWatch for Amazon SNS, they can gain better insight into theperformance of their Amazon SNS topics, push notifications, and SMS deliveries. "  
     },
     {
-        "question"    : "here can a user find information about prohibited actions on the AWS infrastructure?        ",
+        "question"    : "here can a user find information about prohibited actions on the AWS infrastructure?   ",
         "choices"     : [
                             "AWS Trusted Advisor ",
                             "AWS Identity and Access Management (IAM) ",

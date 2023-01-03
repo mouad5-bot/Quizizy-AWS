@@ -1,4 +1,5 @@
-<?php require_once  'config/connection.php'; ?>
+<?php require_once 'config/connection.php'; ?>
+<?php require_once 'config/script.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -49,7 +50,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">    
-                        <form >
+                        <form action="config/script.php" method="POST">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="mb-3">
@@ -60,12 +61,12 @@
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="formrow-lname-input">Last name</label>
-                                        <input type="text" oncklick="verify" class="form-control" id="formrow-lname-input" placeholder="Last name" required />
+                                        <input type="text" oncklick="verify" class="form-control" name="lname" id="formrow-lname-input" placeholder="Last name" required />
                                     </div>
                                 </div>
                             </div>
                             <div class="mt-3">
-                                <a  href="pages/question.php"   class="btn btn-primary btn-sm">Get Started</a>
+                                <a  href="pages/question.php"  type="submit" name="start" class="btn btn-primary btn-sm">Get Started</a>
                             </div>
                         </form>
                     </div>
