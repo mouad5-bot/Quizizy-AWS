@@ -5,7 +5,12 @@ require_once '../classes/question.php';
     if(isset($_POST['start'])) $obj->getData();
     if(isset($_GET['questions'])) getQuestionAsJson();
 
-// work of tomorow >>>>>>> get the variable questions and finishe the work 
+// work of tomorow >>>>>>> get the variable questions and finishe
+
+    function getData()
+    {
+        
+    }
 
     function getQuestionAsJson()
     {

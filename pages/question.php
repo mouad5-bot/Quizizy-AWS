@@ -52,9 +52,9 @@
             </div>
           </div>
         </div>
-        <div class="justify-content-center" id="navigation">
-          <button class="stepper btn btn-primary" onclick="showQuestionComponent()" >Next</button>
-        </div>
+          <div class="justify-content-center" id="navigation">
+            <button type="submit" class="stepper btn btn-primary" onclick="showQuestionComponent()" >Next</button>
+          </div>
       </div>
       <!--_______________Alert info #END_____________________ -->               
     </div>
@@ -74,18 +74,18 @@
       <div class="row">
         <div class="col-12">
           <div class="border-question">
-            <div class="question">
-              <div id="queston-container">
-                
-              </div>
-              <div class="mt-3 float-start ms-2" id="msgRecheck">
+              <div class="question">
+                <div id="queston-container">
+                  
+                </div>
+                <div class="mt-3 float-start ms-2" id="msgRecheck">
 
+                </div>
+                
+                </div><div id="navigation">
+                  <button   class="stepper btn btn-primary" onclick=testingQuestions() data-direction="next">Next</button>
+                </div>
               </div>
-              
-              </div><div id="navigation">
-                <button class="stepper btn btn-primary" onclick=testingQuestions() data-direction="next">Next</button>
-              </div>
-              
           </div>
         </div>
       </div>

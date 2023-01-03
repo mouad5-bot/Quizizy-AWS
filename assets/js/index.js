@@ -7,7 +7,7 @@ getData();
   async function getData() 
   {
       try {
-        const response = await fetch('question.json');
+        const response = await fetch('http://localhost/quizez%20proj/Quizizy-AWS/config/script.php?questions');
         const  res = await response.json(); 
         getQuestions(res); //callback
       } catch (error) {
