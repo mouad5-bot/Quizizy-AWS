@@ -21,3 +21,26 @@ Votre Tech Lead a proposé une solution étant qu'un développeur Frontend, cett
   <li> Chaque question ne peut pas dépasser 30sec, si le timing est cloturé dans ce cas la question doit être considéré comme une réponse fausse.</li>
   <li> Ajout de choix multiples pour quelques questions.</li>
 </ul>
+
+<hr/>
+
+
+# AWS Cloud Practitioner Knowledge Test - Backend
+
+<h2>Contexte du projet</h2>
+Après la réalisation de la partie frontend, votre Tech Lead a proposé une solution étant qu'un développeur Backend, cette tâche consiste à ajouter une tâche qui permet d'enregister les questions et les réponses dans une base de données. pour finaliser l'application web AWS Practitioner Knowledge Test.
+
+
+<h2>Exigences:</h2>
+<ul>
+<li>Etant que développeur backend je peux créer une base de données.</li>
+<li>Insérer les données dans GUI phpMyAdmin.</li>
+<li>Etant que développeur backend je peux créer des classes php pour récupérer les données.</li>
+</ul>
+
+<h2>Bonus:</h2>
+
+<ul>
+<li>Etant que développeur backend je peux créer une fonction afin d'évaluer les questions envoyées par les utilisateurs.</li>
+<li>Etant que développeur backend je peux avoir l'historique des tests réalisés dans la base de données, les informations comprennent la date et l'heur de chaque test, le résultat (Score), l'adresse IP, OS, Browser .... </li>
+</ul>
