@@ -1,5 +1,4 @@
-<?php require_once 'config/connection.php'; ?>
-<?php require_once 'config/script.php'; ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -50,7 +49,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">    
-                        <form action="config/script.php" method="POST">
+                        <form action="config/scripthome.php" method="POST">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="mb-3">
@@ -66,7 +65,7 @@
                                 </div>
                             </div>
                             <div class="mt-3">
-                                <a  href="pages/question.php"  type="submit" name="start" class="btn btn-primary btn-sm">Get Started</a>
+                                <a  href="pages/question.php"  type="submit" onclick=info(); name="start" class="btn btn-primary btn-sm">Get Started</a>
                             </div>
                         </form>
                     </div>
