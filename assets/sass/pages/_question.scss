@@ -104,11 +104,20 @@ $bg-color : rgb(126, 217, 87), rgb(82, 133, 255), rgb(255, 87, 87), rgb(126, 217
   .question
   {
     text-align: center;
-
     .row{
       margin-top: 1rem;
       label{
         text-align: start;
+        float: left;
+        align-items: center;
+        justify-content: center;
+      }
+    
+      input[type=radio] 
+      {
+        transform: scale(1.5, 1.5 );
+        align-items: center;
+        justify-content: center;
       }
 
     }
@@ -123,17 +132,6 @@ $bg-color : rgb(126, 217, 87), rgb(82, 133, 255), rgb(255, 87, 87), rgb(126, 217
         justify-content: space-between;
       
     }
-    
-    // ul
-    // {
-    //   margin-top: 2.5rem;
-
-    //   li
-    //   {
-    //     list-style-type: none;
-    //     margin-bottom: 1rem;
-    //   }
-    // }
   }
 
   #navigation{
@@ -142,19 +140,33 @@ $bg-color : rgb(126, 217, 87), rgb(82, 133, 255), rgb(255, 87, 87), rgb(126, 217
   }
 }
 
-#queston-container{
-  label{
-    float: left;
-  }
-}
+// #queston-container
+// {
+//   label{
+//     float: left;
+//     align-items: center;
+//     justify-content: center;
+//   }
 
-#msgRecheck{
+//   input[type=radio] 
+//   {
+//     transform: scale(1.5, 1.5 );
+//     align-items: center;
+//     justify-content: center;
+//   }
+// }
+
+
+
+#msgRecheck
+{
   h6{
     color: red;
   }
 }
 
-.result-div{
+.result-div
+{
   .border-question{
     margin-top: 1rem;
     margin-bottom: 1rem;

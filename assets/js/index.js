@@ -1,48 +1,62 @@
 let index = 0;
 let index_progress_bar = 0;
-let data = []; 
+let data = [];
 let score = 0;
 getData();
 
-  async function getData() 
-  {
-      try {
-        const response = await fetch('http://localhost/quizez%20proj/Quizizy-AWS/config/script.php?questions');
-        const  res = await response.json(); 
-        getQuestions(res); //callback
-      } catch (error) {
-        console.error(error);
-      }
-  } 
-
-  function getQuestions(questions)
-  {
-      data=questions.sort(()=>Math.random()-0.5 ); //sort : trier 
-      //data=questions;
+async function getData() {
+  try {
+    //const response = await fetch('http://localhost/quizez%20proj/Quizizy-AWS/config/script.php?questions');
+    const response = await fetch(
+      "http://localhost/quiziz/Quizizy-AWS/config/script.php?questions"
+    );
+    const res = await response.json();
+    getQuestions(res); //callback
+  } catch (error) {
+    console.error(error);
   }
+}
 
-  let info_div = document.getElementById("step-1");
-  let question_div = document.getElementById("step-2");
-  let result_div = document.getElementById("step-3");
+function getQuestions(questions) {
+  data = questions.sort(() => Math.random() - 0.5); //sort : trier
+  //data=questions;
+}
 
-  function info()
-  {
-    info_div.classList.add("d-block");
-    question_div.classList.add("d-none");
-    result_div.classList.add("d-none");
+let info_div = document.getElementById("step-1");
+let question_div = document.getElementById("step-2");
+let result_div = document.getElementById("step-3");
 
-    info_div.classList.remove("d-none");
-    question_div.classList.remove("d-block");
-    result_div.classList.remove("d-block");
+function info() {
+  info_div.classList.add("d-block");
+  question_div.classList.add("d-none");
+  result_div.classList.add("d-none");
 
-  }
+  info_div.classList.remove("d-none");
+  question_div.classList.remove("d-block");
+  result_div.classList.remove("d-block");
+}
 
-    function question()
-    {
-      document.getElementById('msgRecheck').innerHTML = ` `
+function question() {
+  document.getElementById("msgRecheck").innerHTML = ` `;
 
-        if(index < data.length){
-          document.getElementById('queston-container').innerHTML = `<h5 id="quesH5"> ${data[index].question} </h5>                
+  // document.getElementById("q1c").style.fontSize = "20px";
+  // document.getElementById("q2c").style.fontSize = "20px";
+  // document.getElementById("q3c").style.fontSize = "20px";
+  // document.getElementById("q4c").style.fontSize = "20px";
+
+  // document.getElementById("q1c").style.width = "30px";
+  // document.getElementById("q1c").style.height = "30px";
+
+  // document.getElementById("q1c").style.color = "red";
+
+
+
+
+  if (index < data.length) {
+    document.getElementById(
+      "queston-container"
+    ).innerHTML = `
+        <h5 id="quesH5"> ${data[index].question} </h5>                
         <div class="row">
           <div class="col-3">
             <input class="mt-3"  type="radio" name="q1" id="q1c" value="0"> <br>
@@ -74,45 +88,39 @@ getData();
           <div class="col-8">
             <label for="q4c" id="QCM4">${data[index].choices[3]}</label> <br>
           </div>
-        </div>`
-        index++;
-        
-        }
-        else {
-          result();
-        }
+        </div>`;
+    index++;
+  } else {
+    result();
+  }
+}
 
-      
-    }
-    
+function result() {
+  info_div.classList.add("d-none");
+  question_div.classList.add("d-none");
+  result_div.classList.add("d-block");
 
-  function result()
-  {
-    info_div.classList.add("d-none");
-    question_div.classList.add("d-none");
-    result_div.classList.add("d-block");
-    
-    info_div.classList.remove("d-block");
-    question_div.classList.remove("d-block");
-    result_div.classList.remove("d-none");
+  info_div.classList.remove("d-block");
+  question_div.classList.remove("d-block");
+  result_div.classList.remove("d-none");
 
-    document.getElementById('progress-result').innerHTML = score;
-    document.getElementById('score').style.width = `${score}%`; 
+  document.getElementById("progress-result").innerHTML = score;
+  document.getElementById("score").style.width = `${score}%`;
 
-    let resultContent = document.querySelector(".result-div");
-    
-    for(let i = 0; i < data.length; i++)
-    {
-      resultContent.innerHTML += 
-      `
+  let resultContent = document.querySelector(".result-div");
+
+  for (let i = 0; i < data.length; i++) {
+    resultContent.innerHTML += `
       <div class="border-question" id="result-content">
       <div class="question">
             <div class="row">
               <div class="col-3 ms-3 text-start">
-                <p> <b>  question ${i+1} :</b> </p> <br>
+                <p> <b>  question ${i + 1} :</b> </p> <br>
               </div>
               <div class="col-8">
-                <label for="q1c" id="QCM1"> ${data[i].question} </label> <br>      
+                <label for="q1c" id="QCM1"> ${
+                  data[i].question
+                } </label> <br>      
               </div>
             </div>
             <div class="row">
@@ -120,68 +128,63 @@ getData();
                 <p> <b>  correct choice :</b> </p> <br>
               </div>
               <div class="col-8 text-start">
-                <label for="q1c" id="QCM1">${(data[i].answer)+1}</label> <br>      
+                <label for="q1c" id="QCM1">${
+                  data[i].answer + 1
+                }</label> <br>      
               </div>
               <div class="row">
                 <div class="col-3 ms-3 text-start">
                   <p> <b>  description :</b> </p> <br>
                 </div>
                 <div class="col-8 mb-5">
-                  <label for="q1c" id="QCM1">${data[i].description} </label> <br>      
+                  <label for="q1c" id="QCM1">${
+                    data[i].description
+                  } </label> <br>      
                 </div>
           </div>
         </div> 
-      </div> ` ;
-    }
+      </div> `;
   }
-  
-
-
-  function testingQuestions()
-  {
-    let checkRadio = document.querySelector("input:checked");
-
-      if(checkRadio)
-      {       
-        let correctQt = data[index-1].answer;
-        let radioChecked = checkRadio.value;
-        if(correctQt == radioChecked){
-          score += 100/data.length;
-        }
-          question(); 
-          progressBar(); 
-        }else
-        {
-          document.getElementById('msgRecheck').innerHTML = `<h6> please select one choice </h6>`
-        }
-  }
-
-  
-  function progressBar()
-  {
-    index_progress_bar += 100/data.length;
-    document.querySelector('.progress-bar').style.width = `${index_progress_bar}%`;           
-  }
-
-
-
-
-function showQuestionComponent(){
-    
-    info_div.classList.add("d-none");
-    question_div.classList.add("d-block");
-    result_div.classList.add("d-none");
-    
-    info_div.classList.remove("d-block");
-    question_div.classList.remove("d-none");
-    result_div.classList.remove("d-block");
-
-    question();
 }
 
+function testingQuestions() {
+  let checkRadio = document.querySelector("input:checked");
 
-function validateForm() 
-{
+  if (checkRadio) {
+    let correctQt = data[index - 1].answer;
+    let radioChecked = checkRadio.value;
+    if (correctQt == radioChecked) {
+      score += 100 / data.length;
+    }
+    question();
+    progressBar();
+  } else {
+    document.getElementById(
+      "msgRecheck"
+    ).innerHTML = `<h6> please select one choice </h6>`;
+  }
+}
+
+function progressBar() {
+  index_progress_bar += 100 / data.length;
+  document.querySelector(
+    ".progress-bar"
+  ).style.width = `${index_progress_bar}%`;
+}
+
+function showQuestionComponent() {
+  info_div.classList.add("d-none");
+  question_div.classList.add("d-block");
+  result_div.classList.add("d-none");
+
+  info_div.classList.remove("d-block");
+  question_div.classList.remove("d-none");
+  result_div.classList.remove("d-block");
+
+  question();
+}
+
+function validateForm() {
   console.log("hey");
   // Get the value of the "name" field
   var name = document.forms["myForm"]["name"].value;
@@ -190,5 +193,5 @@ function validateForm()
   if (name == "") {
     alert("first Name must be filled out");
     return false;
-  } 
+  }
 }
