@@ -93,6 +93,21 @@ body {
   border: none;
   color: #666;
 }
+.stepper li #info-crl {
+  border: #666 solid 1.5px;
+  border-radius: 50%;
+  padding: 6px 12px 6px 12px;
+}
+.stepper li #ques-crl {
+  border: #666 solid 1.5px;
+  border-radius: 50%;
+  padding: 6px 12px 6px 12px;
+}
+.stepper li #res-crl {
+  border: #666 solid 1.5px;
+  border-radius: 50%;
+  padding: 6px 12px 6px 12px;
+}
 
 /* Style the current step */
 .stepper li.current button {

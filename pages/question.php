@@ -9,16 +9,25 @@
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"  />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bootstrap-icons/bootstrap-icons@1.0.0/bootstrap-icons.css" integrity="sha384-i1T9rLrLKPn7pKjhZzJiZMvMZjKNVnR+f8bQX9gEKjq3oFBYn0DQ5gIa5m5q3G5i" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bootstrap-icons/bootstrap-icons@1.0.0/bootstrap-icons.css" integrity="sha384-i1T9rLrLKPn7pKjhZzJiZMvMZjKNVnR+f8bQX9gEKjq3oFBYn0DQ5gIa5m5q3G5i" crossorigin="anonymous"> -->
 </head>
 <body>
   <div class="container">
     <ul class="stepper">
-      <li><button >Informations</button></li>
+      <li>
+        <button id="info-crl">1</button>
+        <button id="info-stp">Informations</button>
+      </li>
       <li> <hr class="hr"/></li>
-      <li><button >Questions</button></li>
+      <li>
+        <button id="ques-crl">2</button>
+        <button id="ques-stp">Questions</button>
+      </li>
       <li> <hr class="hr"/> </li>
-      <li><button onclick="result()">Result</button></li>
+      <li>
+        <button id="res-crl">3</button>
+        <button id="res-stp" onclick=result();>Result</button>
+      </li>
     </ul>
     
     <div id="step-1" class="step">

@@ -4,23 +4,23 @@ let data = [];
 let score = 0;
 getData();
 
-async function getData() {
-  try {
-    //const response = await fetch('http://localhost/quizez%20proj/Quizizy-AWS/config/script.php?questions');
-    const response = await fetch(
-      "http://localhost/quiziz/Quizizy-AWS/config/script.php?questions"
-    );
-    const res = await response.json();
-    getQuestions(res); //callback
-  } catch (error) {
-    console.error(error);
-  }
-}
 
-function getQuestions(questions) {
-  data = questions.sort(() => Math.random() - 0.5); //sort : trier
-  //data=questions;
-}
+  async function getData() 
+  {
+      try {
+        const response = await fetch('http://localhost/quizez%20proj/Quizizy-AWS/config/script.php?questions');
+        const  res = await response.json(); 
+        getQuestions(res); //callback
+      } catch (error) {
+        console.error(error);
+      }
+  } 
+
+  function getQuestions(questions)
+  {
+      data=questions.sort(()=>Math.random()-0.5 ); //sort : trier 
+      //data=questions;
+  }
 
 let info_div = document.getElementById("step-1");
 let question_div = document.getElementById("step-2");
@@ -36,19 +36,9 @@ function info() {
   result_div.classList.remove("d-block");
 }
 
-function question() {
-  document.getElementById("msgRecheck").innerHTML = ` `;
-
-  // document.getElementById("q1c").style.fontSize = "20px";
-  // document.getElementById("q2c").style.fontSize = "20px";
-  // document.getElementById("q3c").style.fontSize = "20px";
-  // document.getElementById("q4c").style.fontSize = "20px";
-
-  // document.getElementById("q1c").style.width = "30px";
-  // document.getElementById("q1c").style.height = "30px";
-
-  // document.getElementById("q1c").style.color = "red";
-
+    function question()
+    {
+      document.getElementById('msgRecheck').innerHTML = ` `
 
 
 
@@ -88,29 +78,37 @@ function question() {
           <div class="col-8">
             <label for="q4c" id="QCM4">${data[index].choices[3]}</label> <br>
           </div>
-        </div>`;
-    index++;
-  } else {
-    result();
-  }
-}
+        </div>`
+        index++;
+        
+        }
+        else {
+          result();
+        }
 
-function result() {
-  info_div.classList.add("d-none");
-  question_div.classList.add("d-none");
-  result_div.classList.add("d-block");
+      
+    }
+    
 
-  info_div.classList.remove("d-block");
-  question_div.classList.remove("d-block");
-  result_div.classList.remove("d-none");
+  function result()
+  {
+    info_div.classList.add("d-none");
+    question_div.classList.add("d-none");
+    result_div.classList.add("d-block");
+    
+    info_div.classList.remove("d-block");
+    question_div.classList.remove("d-block");
+    result_div.classList.remove("d-none");
 
-  document.getElementById("progress-result").innerHTML = score;
-  document.getElementById("score").style.width = `${score}%`;
+    document.getElementById('progress-result').innerHTML = score;
+    document.getElementById('score').style.width = `${score}%`; 
 
-  let resultContent = document.querySelector(".result-div");
-
-  for (let i = 0; i < data.length; i++) {
-    resultContent.innerHTML += `
+    let resultContent = document.querySelector(".result-div");
+    
+    for(let i = 0; i < data.length; i++)
+    {
+      resultContent.innerHTML += 
+      `
       <div class="border-question" id="result-content">
       <div class="question">
             <div class="row">
