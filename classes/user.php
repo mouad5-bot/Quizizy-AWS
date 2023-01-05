@@ -1,5 +1,7 @@
 <?php 
-    class User
+require_once '../config/connection.php';
+
+    class User extends Connection
     {
         public $id ;
         public $fname ;

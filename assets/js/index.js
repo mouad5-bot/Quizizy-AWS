@@ -29,6 +29,10 @@ let question_div = document.getElementById("step-2");
 let result_div = document.getElementById("step-3");
 
 function info() {
+  document.getElementById("info-stp").style.color = "rgb(82, 133, 255)";
+
+  document.getElementById("info-crl").style.background = "rgb(82, 133, 255)"; 
+
   info_div.classList.add("d-block");
   question_div.classList.add("d-none");
   result_div.classList.add("d-none");
@@ -36,19 +40,25 @@ function info() {
   info_div.classList.remove("d-none");
   question_div.classList.remove("d-block");
   result_div.classList.remove("d-block");
+  
+
 }
 
 function question()
 {
   document.getElementById('msgRecheck').innerHTML = ` `
   
-  document.getElementById("info-stp").style.color = "rgb(82, 133, 255)";
+  document.getElementById("info-stp").style.color = "#666 ";
   document.getElementById("ques-stp").style.color = "rgb(82, 133, 255)";
-  document.getElementById("res-stp").style.color = "rgb(82, 133, 255)";
+  document.getElementById("res-stp").style.color = "#666 ";
 
-  document.getElementById("info-crl").style.background = "rgb(82, 133, 255)"; 
+  document.getElementById("info-crl").style.background = "linen "; 
   document.getElementById("ques-crl").style.background = "rgb(82, 133, 255)"; 
-  document.getElementById("res-crl").style.background = "rgb(82, 133, 255)"; 
+  document.getElementById("res-crl").style.background = "linen ";
+  
+  document.getElementById("info-crl").style.color = "#666"; 
+  document.getElementById("ques-crl").style.color = "white "; 
+  document.getElementById("res-crl").style.color = "#666 ";  
 
   if (index < data.length) {
     document.getElementById(
@@ -107,6 +117,19 @@ function question()
     info_div.classList.remove("d-block");
     question_div.classList.remove("d-block");
     result_div.classList.remove("d-none");
+    
+    document.getElementById("info-stp").style.color = "#666 ";
+    document.getElementById("ques-stp").style.color = "#666 ";
+    document.getElementById("res-stp").style.color = "rgb(82, 133, 255)";
+
+    document.getElementById("info-crl").style.background = "linen"; 
+    document.getElementById("ques-crl").style.background = "linen"; 
+    document.getElementById("res-crl").style.background = "rgb(82, 133, 255)"; ;
+
+    document.getElementById("info-crl").style.color = "#666"; 
+    document.getElementById("ques-crl").style.color = "#666 "; 
+    document.getElementById("res-crl").style.color = "white"; 
+
 
     document.getElementById('progress-result').innerHTML = score;
     document.getElementById('score').style.width = `${score}%`; 
@@ -186,7 +209,7 @@ function showQuestionComponent() {
 
   info_div.classList.remove("d-block");
   question_div.classList.remove("d-none");
-  result_div.classList.remove("d-block");
+  result_div.classList.remove("d-block"); 
 
   question();
 }

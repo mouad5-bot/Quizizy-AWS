@@ -16,17 +16,17 @@
     <ul class="stepper">
       <li>
         <button id="info-crl">1</button>
-        <button id="info-stp">Informations</button>
+        <button id="info-stp"> <b>Informations </b></button>
       </li>
       <li> <hr class="hr"/></li>
       <li>
         <button id="ques-crl">2</button>
-        <button id="ques-stp">Questions</button>
+        <button id="ques-stp"> <b> Questions </b></button>
       </li>
       <li> <hr class="hr"/> </li>
       <li>
         <button id="res-crl">3</button>
-        <button id="res-stp" onclick=result();>Result</button>
+        <button id="res-stp" onclick=result();> <b> Result </b></button>
       </li>
     </ul>
     
