@@ -5,22 +5,24 @@ let score = 0;
 getData();
 
 
-  async function getData() 
-  {
-      try {
-        const response = await fetch('http://localhost/quizez%20proj/Quizizy-AWS/config/script.php?questions');
-        const  res = await response.json(); 
-        getQuestions(res); //callback
-      } catch (error) {
-        console.error(error);
-      }
-  } 
-
-  function getQuestions(questions)
-  {
-      data=questions.sort(()=>Math.random()-0.5 ); //sort : trier 
-      //data=questions;
+async function getData() 
+{
+  try {
+    const response = await fetch('http://localhost/quizez%20proj/Quizizy-AWS/config/script.php?questions');
+    // const response = await fetch(
+    //   "http://localhost/quiziz/Quizizy-AWS/config/script.php?questions"
+    // );
+    const res = await response.json();
+    getQuestions(res); //callback
+  } catch (error) {
+    console.error(error);
   }
+}
+
+function getQuestions(questions)
+{
+  data=questions.sort(()=>Math.random()-0.5 ); //sort : trier 
+}
 
 let info_div = document.getElementById("step-1");
 let question_div = document.getElementById("step-2");
@@ -36,11 +38,17 @@ function info() {
   result_div.classList.remove("d-block");
 }
 
-    function question()
-    {
-      document.getElementById('msgRecheck').innerHTML = ` `
+function question()
+{
+  document.getElementById('msgRecheck').innerHTML = ` `
+  
+  document.getElementById("info-stp").style.color = "rgb(82, 133, 255)";
+  document.getElementById("ques-stp").style.color = "rgb(82, 133, 255)";
+  document.getElementById("res-stp").style.color = "rgb(82, 133, 255)";
 
-
+  document.getElementById("info-crl").style.background = "rgb(82, 133, 255)"; 
+  document.getElementById("ques-crl").style.background = "rgb(82, 133, 255)"; 
+  document.getElementById("res-crl").style.background = "rgb(82, 133, 255)"; 
 
   if (index < data.length) {
     document.getElementById(
@@ -81,10 +89,10 @@ function info() {
         </div>`
         index++;
         
-        }
-        else {
-          result();
-        }
+      }
+      else {
+        result();
+      }
 
       
     }
@@ -145,7 +153,8 @@ function info() {
   }
 }
 
-function testingQuestions() {
+function testingQuestions() 
+{
   let checkRadio = document.querySelector("input:checked");
 
   if (checkRadio) {

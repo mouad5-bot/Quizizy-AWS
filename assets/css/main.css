@@ -190,7 +190,7 @@ body {
   margin-top: 1rem;
 }
 .border-question .question .row label {
-  float: left;
+  text-align: start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

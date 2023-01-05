@@ -65,11 +65,11 @@
             <button type="submit" class="stepper btn btn-primary" onclick="showQuestionComponent()" >Next</button>
           </div>
       </div>
-      <!--_______________Alert info #END_____________________ -->               
+    <!--_______________Alert info #END_____________________ -->               
     </div>
 
     <div id="step-2" class="step d-none">
-      <!-- _______________progressBar #START___________________ -->
+    <!-- _______________progressBar #START___________________ -->
         <div class="row mt-4 mb-3">
           <div class="col">
               <div class="progress">
