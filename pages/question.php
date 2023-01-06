@@ -15,8 +15,8 @@
   <div class="container">
     <ul class="stepper">
       <li>
-        <button id="info-crl">1</button>
-        <button id="info-stp"> <b>Informations </b></button>
+        <button id="info-crl" >1</button>
+        <button id="info-stp" > <b>Informations </b></button>
       </li>
       <li> <hr class="hr"/></li>
       <li>

@@ -93,7 +93,12 @@ body {
   border: none;
   color: #666;
 }
+.stepper li #info-stp {
+  color: rgb(82, 133, 255);
+}
 .stepper li #info-crl {
+  color: #fff;
+  background-color: rgb(82, 133, 255);
   border: #666 solid 1.5px;
   border-radius: 50%;
   padding: 6px 12px 6px 12px;
