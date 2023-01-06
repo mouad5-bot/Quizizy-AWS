@@ -15,8 +15,8 @@
   <div class="container">
     <ul class="stepper">
       <li>
-        <button id="info-crl">1</button>
-        <button id="info-stp"> <b>Informations </b></button>
+        <button id="info-crl" >1</button>
+        <button id="info-stp" > <b>Informations </b></button>
       </li>
       <li> <hr class="hr"/></li>
       <li>
@@ -32,7 +32,7 @@
     
     <div id="step-1" class="step">
       <!-- _______________Alert info #START____________________ -->
-      <div class="alerts-info">
+      <div class="alerts-info card">
         <div class="row mt-4">
           <div class="col-12">
             <div class="alert-info-1" role="alert">
@@ -61,9 +61,9 @@
             </div>
           </div>
         </div>
-          <div class="justify-content-center" id="navigation">
-            <button type="submit" class="stepper btn btn-primary" onclick="showQuestionComponent()" >Next</button>
-          </div>
+        <div class="justify-content-center" id="navigation">
+          <button type="submit" class="stepper btn btn-primary" onclick="showQuestionComponent()" >Next</button>
+        </div>
       </div>
     <!--_______________Alert info #END_____________________ -->               
     </div>
@@ -102,7 +102,7 @@
 
     <div id="step-3" class="step d-none" >
       <!-- _______________progressBar #START___________________ -->
-      <h5 class="m-3 ">votre resultat est  : <span id="progress-result"></span>%</h5>
+      <h5 class="m-3 text-center">Your result is  : <span id="progress-result"></span>%</h5>
       <div class="row m-3">
         <div class="col">
           <div class="progress">

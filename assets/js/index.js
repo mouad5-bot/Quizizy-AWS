@@ -8,10 +8,10 @@ getData();
 async function getData() 
 {
   try {
-    const response = await fetch('http://localhost/quizez%20proj/Quizizy-AWS/config/script.php?questions');
-    // const response = await fetch(
-    //   "http://localhost/quiziz/Quizizy-AWS/config/script.php?questions"
-    // );
+    // const response = await fetch('http://localhost/quizez%20proj/Quizizy-AWS/config/script.php?questions');
+    const response = await fetch(
+      "http://localhost/quiziz/Quizizy-AWS/config/script.php?questions"
+    );
     const res = await response.json();
     getQuestions(res); //callback
   } catch (error) {
@@ -21,7 +21,7 @@ async function getData()
 
 function getQuestions(questions)
 {
-  data=questions.sort(()=>Math.random()-0.5 ); //sort : trier 
+  data = questions.sort(()=>Math.random()-0.5 ); //sort = trier 
 }
 
 let info_div = document.getElementById("step-1");
@@ -29,9 +29,9 @@ let question_div = document.getElementById("step-2");
 let result_div = document.getElementById("step-3");
 
 function info() {
-  document.getElementById("info-stp").style.color = "rgb(82, 133, 255)";
+  // document.getElementById("info-stp").style.color = "rgb(82, 133, 255)";
 
-  document.getElementById("info-crl").style.background = "rgb(82, 133, 255)"; 
+  // document.getElementById("info-crl").style.background = "rgb(82, 133, 255)"; 
 
   info_div.classList.add("d-block");
   question_div.classList.add("d-none");
